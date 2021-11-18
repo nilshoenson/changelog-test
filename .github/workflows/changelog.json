@@ -1,31 +1,8 @@
 {
   "categories": [
     {
-      "title": "## Features",
-      "labels": [".*"]
-    },
-    {
-      "title": "## Fixes",
-      "labels": ["Fix"]
-    },
-    {
-      "title": "## Tests",
-      "labels": [
-        "test"
-      ]
-    },
-    {
-      "title": "## Miscellaneous",
-      "labels": [
-        "build",
-        "chore",
-        "ci",
-        "docs",
-        "perf",
-        "refactor",
-        "revert",
-        "style"
-      ]
+      "title": "## Changelog",
+      "labels": ["."]
     }
   ],
   "ignore_labels": [
@@ -37,7 +14,7 @@
   "empty_template": "- No changes",
   "label_extractor": [
     {
-      "pattern": "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test|merge|Fix).*",
+      "pattern": "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test|merge).*",
       "target": "$1",
       "on_property": "title"
     }

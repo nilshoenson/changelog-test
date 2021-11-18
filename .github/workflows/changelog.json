@@ -1,15 +1,9 @@
 {
-  "categories": [
-    {
-      "title": "## Changelog",
-      "labels": ["."]
-    }
-  ],
   "ignore_labels": [
     "ignore"
   ],
   "sort": "ASC",
-  "template": "${{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n${{UNCATEGORIZED}}\n</details>",
+  "template": "Changelog:\n\n${{UNCATEGORIZED}}",
   "pr_template": "- ${{TITLE}}",
   "empty_template": "- No changes",
   "label_extractor": [

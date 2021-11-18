@@ -2,7 +2,7 @@
   "categories": [
     {
       "title": "## Features",
-      "labels": ["func"]
+      "labels": [".*"]
     },
     {
       "title": "## Fixes",
@@ -33,7 +33,7 @@
   ],
   "sort": "ASC",
   "template": "\n\n${{CHANGELOG}}\n\n${{UNCATEGORIZED}}\n",
-  "pr_template": "- ${{TITLE}}\n   - PR: #${{NUMBER}}",
+  "pr_template": "- ${{TITLE}}",
   "empty_template": "- No changes",
   "label_extractor": [
     {

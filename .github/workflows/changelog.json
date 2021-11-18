@@ -3,7 +3,7 @@
     "ignore"
   ],
   "sort": "ASC",
-  "template": "Changelog:\n\n${{UNCATEGORIZED}}",
+  "template": "## Changelog:\n\n${{UNCATEGORIZED}}",
   "pr_template": "- ${{TITLE}}",
   "empty_template": "- No changes",
   "label_extractor": [

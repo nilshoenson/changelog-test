@@ -1,0 +1,66 @@
+{
+  "categories": [
+    {
+      "title": "### Nuevo",
+      "labels": [
+        "feat"
+      ]
+    },
+    {
+      "title": "### Correcciones",
+      "labels": [
+        "fix"
+      ]
+    },
+    {
+      "title": "### Tests",
+      "labels": [
+        "test"
+      ]
+    },
+    {
+      "title": "### Otros",
+      "labels": [
+        "build",
+        "chore",
+        "ci",
+        "docs",
+        "perf",
+        "refactor",
+        "revert",
+        "style"
+      ]
+    }
+  ],
+  "ignore_labels": [
+    "ignore"
+  ],
+  "sort": "ASC",
+  "template": "\n\n${{CHANGELOG}}\n\n${{UNCATEGORIZED}}\n",
+  "pr_template": "${{TITLE}} #${{NUMBER}}",
+  "empty_template": "",
+  "label_extractor": [
+    {
+      "pattern": "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test|merge).*",
+      "target": "$1",
+      "on_property": "title"
+    }
+  ],
+  "transformers": [
+    {
+      "pattern": "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test|merge)\\(?([a-z ]+)?\\)?: ([\\w ]+) (#[0-9]+)",
+      "target": "- $2: $3 $4"
+    }
+  ],
+  "max_tags_to_fetch": 200,
+  "max_pull_requests": 200,
+  "max_back_track_time_days": 365,
+  "tag_resolver": {
+    "method": "semver"
+  },
+  "base_branches": [
+    "main",
+    "master",
+    "support"
+  ]
+}

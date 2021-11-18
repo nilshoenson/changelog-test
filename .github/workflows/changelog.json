@@ -1,25 +1,21 @@
 {
   "categories": [
     {
-      "title": "### Nuevo",
-      "labels": [
-        "feat"
-      ]
+      "title": "## Features",
+      "labels": ["func"]
     },
     {
-      "title": "### Correcciones",
-      "labels": [
-        "fix"
-      ]
+      "title": "## Fixes",
+      "labels": ["fix", "bug"]
     },
     {
-      "title": "### Tests",
+      "title": "## Tests",
       "labels": [
         "test"
       ]
     },
     {
-      "title": "### Otros",
+      "title": "## Miscellaneous",
       "labels": [
         "build",
         "chore",
@@ -37,19 +33,24 @@
   ],
   "sort": "ASC",
   "template": "\n\n${{CHANGELOG}}\n\n${{UNCATEGORIZED}}\n",
-  "pr_template": "${{TITLE}} #${{NUMBER}}",
-  "empty_template": "",
+  "pr_template": "- ${{TITLE}}\n   - PR: #${{NUMBER}}",
+  "empty_template": "- No changes",
   "label_extractor": [
     {
-      "pattern": "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test|merge).*",
+      "pattern": "(.) (.+)",
       "target": "$1",
-      "on_property": "title"
+      "flags": "gu"
+    },
+    {
+      "pattern": "\\[Issue\\]",
+      "on_property": "title",
+      "method": "match"
     }
   ],
   "transformers": [
     {
       "pattern": "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test|merge)\\(?([a-z ]+)?\\)?: ([\\w ]+) (#[0-9]+)",
-      "target": "- $2: $3 $4"
+      "target": "- $4\n  - $6"
     }
   ],
   "max_tags_to_fetch": 200,

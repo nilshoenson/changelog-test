@@ -9,7 +9,7 @@
     "ignore"
   ],
   "sort": "ASC",
-  "template": "\n\n${{CHANGELOG}}\n\n${{UNCATEGORIZED}}\n",
+  "template": "${{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n${{UNCATEGORIZED}}\n</details>",
   "pr_template": "- ${{TITLE}}",
   "empty_template": "- No changes",
   "label_extractor": [

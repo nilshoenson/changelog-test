@@ -6,7 +6,7 @@
     },
     {
       "title": "## Fixes",
-      "labels": ["fix", "bug"]
+      "labels": ["fix", "bug", "Fix"]
     },
     {
       "title": "## Tests",

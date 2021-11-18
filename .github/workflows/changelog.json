@@ -6,7 +6,7 @@
     },
     {
       "title": "## Fixes",
-      "labels": ["fix", "bug", "Fix"]
+      "labels": ["Fix"]
     },
     {
       "title": "## Tests",
@@ -37,14 +37,9 @@
   "empty_template": "- No changes",
   "label_extractor": [
     {
-      "pattern": "(.) (.+)",
+      "pattern": "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test|merge|Fix).*",
       "target": "$1",
-      "flags": "gu"
-    },
-    {
-      "pattern": "\\[Issue\\]",
-      "on_property": "title",
-      "method": "match"
+      "on_property": "title"
     }
   ],
   "transformers": [
